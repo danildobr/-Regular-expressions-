@@ -4,7 +4,6 @@ import csv
 
 def fix_names(contacts_list):
     '''Функция для разделения ФИО на отдельные поля (lastname, firstname, surname)
-    
     Обрабатывает первые три элемента каждой записи, объединяет их в строку,
     затем разделяет по пробелам и распределяет по полям:
     - Первое слово -> фамилия (lastname)
@@ -21,7 +20,6 @@ def fix_names(contacts_list):
 
 def fix_phones(contacts_list):
     '''Функция для приведения телефонов к единому формату
-    
     Преобразует все номера телефонов к формату:
     - Основной номер: +7(999)999-99-99
     - С добавочным номером: +7(999)999-99-99 доб.9999
@@ -49,7 +47,6 @@ def fix_phones(contacts_list):
 
 def merge_duplicates(contacts_list):
     '''Функция для объединения дублирующихся записей
-    
     Объединяет записи с одинаковыми фамилией (lastname) и именем (firstname).
     При объединении сохраняет все доступные данные из дубликатов.
     '''
@@ -92,15 +89,3 @@ def main():
 
 if __name__ == '__main__':
     main()
-
-
-
-
-
-
-# # TODO 2: сохраните получившиеся данные в другой файл
-# # код для записи файла в формате CSV
-# with open('phonebook.csv', 'w', encoding='utf-8') as f:
-#   datawriter = csv.writer(f, delimiter=',')
-#   # Вместо contacts_list подставьте свой список
-#   datawriter.writerows(contacts_list)
